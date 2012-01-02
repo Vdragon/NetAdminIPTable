@@ -6,11 +6,9 @@ print ("<?xml version=\"1.0\" encoding=\"utf-8\"\n");
 <!--（此標籤包住的內容為註解）以上為XML和DTD(Document Type
     Definition)的宣告-->
 <!--
-首頁（唯讀模式） |
-適用於網路管理者的IP位址表
-IP Table Suitable for Networking Administrator(s)
+XHTML 1.0 Transitional範本
     本網頁使用的智慧財產授權：
-      請連繫pika1021@gmail.com詢問，謝謝！
+      創用CC　姓名標示─非商業性─相同方式分享(BY-NC-SA) 目前最新版本
     詳細資料註明於下方meta元素。
 已知問題：
 
@@ -28,7 +26,7 @@ IP Table Suitable for Networking Administrator(s)
   <!--head標籤：包含一些metadata（中介資料）-->
   <head>
     <!--title標籤：顯示於標題列(title bar)的文字-->
-    <title>首頁（唯讀模式） | 適用於網路管理者的IP位址表</title>
+    <title>管理員登入 | 適用於網路管理者的IP位址表</title>
     <!--meta標籤：一些非此標籤所能表示的一些其他的metadata（中介資料）
           name屬性：metadata的名稱
             author：網頁的創作者名稱。
@@ -44,13 +42,13 @@ IP Table Suitable for Networking Administrator(s)
           參考網址：https://developer.mozilla.org/en/HTML/Element/meta
     -->
     <!--網頁版本-->
-    <meta name="webpage-version" content="0.00(0)" />
+    <meta name="webpage-version" content="" />
     <!--XHTML範本版本-->
     <meta name="template-version" content="1.09(13)201112081845" />
-    <meta name="author" content="國立海洋大學資訊工程學系　B97570146楊力維 09957010林博仁" />
-    <meta name="description" content="適用於網路管理者的IP位址表" />
-    <meta name="generator" content="Kate純文字編輯器" />
-    <meta name="keywords" content="IP位址表" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="generator" content="" />
+    <meta name="keywords" content="" />
     <meta name="robots" content="index,follow" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <!--
@@ -58,13 +56,13 @@ IP Table Suitable for Networking Administrator(s)
     <link href='' rel='stylesheet' type='text/css' />
     <script src='' type='text/javascript'></script>
     -->
-    <link href='../../My_projects/Generic_CSS_stylesheet/Stylesheets/Generic_stylesheet.css'
+    <link href='../../../My_projects/Generic_CSS_stylesheet/Stylesheets/Generic_stylesheet.css'
            rel='stylesheet'
            type='text/css' />
-    <link href='Stylesheets/Global_NetAdminIPtable.css'
+    <link href='../Stylesheets/Global_NetAdminIPtable.css'
            rel='stylesheet'
            type='text/css' />
-    <link href='Stylesheets/IPtable_NetAdminIPtable.css'
+    <link href='../Stylesheets/Admin_login_NetAdminIPtable.css'
            rel='stylesheet'
            type='text/css' />
   </head>
@@ -76,56 +74,51 @@ IP Table Suitable for Networking Administrator(s)
   <body xml:lang="zh-TW" lang="zh-TW">
     <!--header-->
     <!--版本：1.01(1)201112021727-->
-    <div class='div_header'>
+    <div id='div_header'>
       <div id='div_header_left'>
-        <a href='../index.html' target='_self'>至外層頁面</a>
+        <a href='../index.php' target='_self'>到外層頁面</a>
       </div>
       <div id='div_header_center'>
-        <!--<a href='javascript:window.history.back();' target='_self'>回上一頁</a>-->
+        <!--<a href='javascript:window.history.back();' target='_self'>到外層頁面</a>-->
       </div>
       <div id='div_header_right'>
-        <?php
-
-        ?>
-        <a href='Webpages/Admin_login.php' target='_self'>管理員登入</a>
+        <!--<a href='' target='_self'></a>-->
       </div>
       <hr />
     </div>
     <div id='div_content'>
-      <div id='control_area'>
-        <!--放置控制按鈕的區塊-->
-      </div>
-      <div id='ip_table'>
-        <table id='ip_80_table' class='generic_table'>
-          <caption>網段140.121.80.X的IP配置狀態如下：</caption>
+      <table class='generic_table'>
+        <form action='Admin_authentate.php' method='post'>
+          <caption>管理員登入</caption>
           <thead>
             <tr>
-              <th>IP位址</th>
-              <th>有無被設定</th>
-              <th>機器功能</th>
-              <th>使用的連接埠</th>
-              <th>負責人</th>
-              <th>機器所在位置</th>
+              <th colspan='2'>身份驗證</th>
             </tr>
           </thead>
           <tfoot>
-            <tr>
-              <th colspan='6'>網段140.121.80.X</th>
+            <tr id='row_action'>
+              <td colspan='2'>
+                <input type='submit' value='登入' />
+                <input type='reset' value='清空重填' />
+              </td>
             </tr>
           </tfoot>
           <tbody>
             <tr>
-              <td>140.121.80.16</td>
-              <td>有</td>
-              <td>DNS(Domain Name System)</td>
-              <td>53/tcp</td>
-              <td>S2</td>
-              <td>某個地方</td>
+              <label>
+                <td>管理員帳號名稱：</td>
+                <td><input type='text' name='account_name' size='30' maxlength='20' /></td>
+              </label>
+            </tr>
+            <tr>
+              <label>
+                <td>管理員帳號密碼：</td>
+                <td><input type='password' name='account_password' size='30' maxlength='30' /></td>
+              </label>
             </tr>
           </tbody>
-        </table>
-      </div>
-
+        </form>
+      </table>
     </div>
     <!--footer-->
     <!--版本：1.00(0)201112012220-->

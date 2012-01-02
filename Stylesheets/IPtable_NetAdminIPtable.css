@@ -15,8 +15,26 @@
  * 待辦事項：
  *
  */
+#div_header{
+  position:absolute;
+}
+#div_header_right{
+  position:absolute;
+  /*top:0px;*/
+  right:0px;
+}
+#div_header_center{
+  position:absolute;
+  /*top:0px;*/
+}
+#div_header_left{
+  position:absolute;
+  /*top:0px;*/
+  left:0px;
+}
 .div_content{
   text-align:center;
+
 }
 @media screen{
 
