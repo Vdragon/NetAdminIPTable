@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?php
+print ("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--（此標籤包住的內容為註解）以上為XML和DTD(Document Type
@@ -82,7 +84,7 @@ IP Table Suitable for Networking Administrator(s)
         <!--<a href='javascript:window.history.back();' target='_self'>回上一頁</a>-->
       </div>
       <div id='div_header_right'>
-        <!--<a href='' target='_self'></a>-->
+        <a href='Webpages/login.php' target='_self'>管理員登入</a>
       </div>
       <hr />
     </div>
@@ -129,7 +131,7 @@ IP Table Suitable for Networking Administrator(s)
       <div id='div_footer_copyright'>
         智慧財產權歸屬：國立海洋大學資訊工程學系　B97570146楊力維 09957010林博仁<br />
         如有授權需求歡迎來信洽詢：<a href='mailto:pika1021@gmail.com'>pika1021＠gmail.com</a><br />
-        Project說明簡報：<a href='Resource/Manual/Project_manual.odp'>Open Document格式</a> | <a href='Resource/Manual/Project_manual.pdf'>PDF格式</a>
+        Project說明簡報：<a href='Resources/Manual/Project_manual.odp'>Open Document格式</a> | <a href='Resources/Manual/Project_manual.pdf'>PDF格式</a>
       </div>
       <hr />
       <!--W3C HTML Markup Validator通過之後可以放上此圖片-->
