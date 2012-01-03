@@ -58,13 +58,13 @@ IP Table Suitable for Networking Administrator(s)
     <link href='' rel='stylesheet' type='text/css' />
     <script src='' type='text/javascript'></script>
     -->
-    <link href='../../My_projects/Generic_CSS_stylesheet/Stylesheets/Generic_stylesheet.css'
+    <link href='../../../My_projects/Generic_CSS_stylesheet/Stylesheets/Generic_stylesheet.css'
            rel='stylesheet'
            type='text/css' />
-    <link href='Stylesheets/Global_NetAdminIPtable.css'
+    <link href='../Stylesheets/Global_NetAdminIPtable.css'
            rel='stylesheet'
            type='text/css' />
-    <link href='Stylesheets/IPtable_NetAdminIPtable.css'
+    <link href='../Stylesheets/IPtable_NetAdminIPtable.css'
            rel='stylesheet'
            type='text/css' />
   </head>
@@ -73,7 +73,7 @@ IP Table Suitable for Networking Administrator(s)
           xml:lang：用來宣告XML使用的語言
         參考網址：https://developer.mozilla.org/en/HTML/Element/body
     -->
-  <body xml:lang="zh-TW" lang="zh-TW">
+  <body xml:lang="zh-TW" lang="zh-TW" class='generic_body'>
     <!--header-->
     <!--版本：1.01(1)201112021727-->
     <div class='div_header'>
@@ -92,16 +92,11 @@ IP Table Suitable for Networking Administrator(s)
       <hr />
     </div>
     <div id='div_content'>
-      <div id='control_area'>
-        <!--放置控制按鈕的區塊-->
-      </div>
-      <div id='ip_table'>
-        <table id='ip_80_table' class='generic_table'>
-          <caption>網段140.121.80.X的IP配置狀態如下：</caption>
-          <thead>
+      <table class='generic_table'>
+        <caption>新增機器</caption>
+         <thead>
             <tr>
               <th>IP位址</th>
-              <th>有無被設定</th>
               <th>機器功能</th>
               <th>使用的連接埠</th>
               <th>負責人</th>
@@ -110,22 +105,26 @@ IP Table Suitable for Networking Administrator(s)
           </thead>
           <tfoot>
             <tr>
-              <th colspan='6'>網段140.121.80.X</th>
+              <th colspan='5'><input type='submit' value='加入機器' /><input type='reset' value='清除重填' /></th>
             </tr>
           </tfoot>
           <tbody>
             <tr>
-              <td>140.121.80.16</td>
-              <td>有</td>
-              <td>DNS(Domain Name System)</td>
-              <td>53/tcp</td>
-              <td>S2</td>
-              <td>某個地方</td>
+              <td>
+                <label>140 . 121 . 80 .
+                  <select name='IP_last_4_digits'>
+                    <!--產生0~255-->
+                    <!--<option value="1">1</option>-->
+                  </select>
+                </label>
+              </td>
+              <td><input type='text' name='machine_feature' size='20' maxlength='50' /></td>
+              <td><input type='text' name='machine_ports' size='20' maxlength='50' /></td>
+              <td><input type='text' name='machine_owner' size='20' maxlength='20' /></td>
+              <td><input type='text' name='machine_location' size='20' maxlength='50' /></td>
             </tr>
           </tbody>
-        </table>
-      </div>
-
+      </table>
     </div>
     <!--footer-->
     <!--版本：1.00(0)201112012220-->
